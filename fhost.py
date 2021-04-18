@@ -40,8 +40,8 @@ app.config["PREFERRED_URL_SCHEME"] = "https" # nginx users: make sure to have 'u
 app.config["MAX_CONTENT_LENGTH"] = 256 * 1024 * 1024
 app.config["MAX_URL_LENGTH"] = 4096
 app.config["FHOST_STORAGE_PATH"] = "up"
-app.config["FHOST_USE_X_ACCEL_REDIRECT"] = True # expect nginx by default
-app.config["USE_X_SENDFILE"] = False
+app.config["FHOST_USE_X_ACCEL_REDIRECT"] = False # expect nginx by default
+app.config["USE_X_SENDFILE"] = True
 app.config["FHOST_EXT_OVERRIDE"] = {
     "audio/flac" : ".flac",
     "image/gif" : ".gif",
